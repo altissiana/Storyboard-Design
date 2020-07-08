@@ -19,6 +19,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleLabel.alpha = 0
+        deviceImageView.alpha = 0
+        playVisualView.alpha = 0
+        
+        UIView.animate(withDuration: 1) {
+            self.titleLabel.alpha = 1
+            self.deviceImageView.alpha = 1
+            self.playVisualView.alpha = 1
+        }
     }
 }
-
