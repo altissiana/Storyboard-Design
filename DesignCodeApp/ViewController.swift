@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        scrollView.delegate = self
         titleLabel.alpha = 0
         deviceImageView.alpha = 0
         playVisualView.alpha = 0
@@ -43,4 +43,8 @@ class ViewController: UIViewController {
             self.playVisualView.alpha = 1
         }
     }
+}
+
+extension ViewController: UIScrollViewDelegate{
+    
 }
