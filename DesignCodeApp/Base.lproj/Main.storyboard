@@ -345,7 +345,6 @@ design and code an iOS 11 app.</string>
                         <outlet property="bookView" destination="faL-J7-Kme" id="iwY-jg-z1F"/>
                         <outlet property="deviceImageView" destination="9nn-e2-82A" id="zAU-jt-euk"/>
                         <outlet property="heroView" destination="qp3-OS-owE" id="5Qk-kh-cgU"/>
-                        <outlet property="playVisualEffectView" destination="ESm-YF-xcG" id="mVD-ss-DDf"/>
                         <outlet property="playVisualView" destination="ESm-YF-xcG" id="ICU-9y-PMs"/>
                         <outlet property="scrollView" destination="Fai-Nk-Vp0" id="XPh-Nt-Eum"/>
                         <outlet property="titleLabel" destination="Kxh-Jj-Lja" id="VzJ-Bb-9Sj"/>
@@ -358,6 +357,7 @@ design and code an iOS 11 app.</string>
         <!--Section View Controller-->
         <scene sceneID="WER-Wf-8Mk">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppU-HL-HWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="zF3-WW-dbf" customClass="SectionViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UtY-l5-rpX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -366,7 +366,6 @@ design and code an iOS 11 app.</string>
                         <viewLayoutGuide key="safeArea" id="wiQ-kJ-fIw"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ppU-HL-HWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="887" y="-308"/>
         </scene>
