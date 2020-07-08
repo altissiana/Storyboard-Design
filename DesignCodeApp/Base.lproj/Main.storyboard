@@ -341,9 +341,13 @@ design and code an iOS 11 app.</string>
                     </view>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="pSF-1z-nLr" id="tH8-aQ-Tdy"/>
+                        <outlet property="bookView" destination="faL-J7-Kme" id="iwY-jg-z1F"/>
                         <outlet property="deviceImageView" destination="9nn-e2-82A" id="zAU-jt-euk"/>
+                        <outlet property="heroView" destination="qp3-OS-owE" id="5Qk-kh-cgU"/>
                         <outlet property="playVisualEffectView" destination="ESm-YF-xcG" id="mVD-ss-DDf"/>
                         <outlet property="playVisualView" destination="ESm-YF-xcG" id="ICU-9y-PMs"/>
+                        <outlet property="scrollView" destination="Fai-Nk-Vp0" id="XPh-Nt-Eum"/>
                         <outlet property="titleLabel" destination="Kxh-Jj-Lja" id="VzJ-Bb-9Sj"/>
                     </connections>
                 </viewController>
