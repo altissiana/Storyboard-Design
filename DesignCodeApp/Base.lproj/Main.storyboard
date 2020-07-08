@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,11 +20,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-Nk-Vp0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qp3-OS-owE" userLabel="Hero View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qp3-OS-owE" userLabel="Hero View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="pSF-1z-nLr">
-                                                <rect key="frame" x="0.0" y="-50" width="375" height="502"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn to design &amp; code for iOS 11" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxh-Jj-Lja">
                                                 <rect key="frame" x="37.666666666666657" y="106" width="160" height="172"/>
@@ -230,7 +231,7 @@
                                             <constraint firstItem="9nn-e2-82A" firstAttribute="leading" secondItem="Kxh-Jj-Lja" secondAttribute="trailing" constant="4" id="lsb-Wp-idN"/>
                                             <constraint firstAttribute="trailing" secondItem="pSF-1z-nLr" secondAttribute="trailing" id="m1m-06-Cdb"/>
                                             <constraint firstAttribute="trailing" secondItem="e86-tx-fm3" secondAttribute="trailing" id="r1f-rh-MM2"/>
-                                            <constraint firstItem="pSF-1z-nLr" firstAttribute="top" secondItem="qp3-OS-owE" secondAttribute="top" constant="-50" id="rNx-v8-Iyi"/>
+                                            <constraint firstItem="pSF-1z-nLr" firstAttribute="top" secondItem="qp3-OS-owE" secondAttribute="top" id="rNx-v8-Iyi"/>
                                             <constraint firstAttribute="height" constant="452" id="rXJ-FK-y7K"/>
                                             <constraint firstAttribute="bottom" secondItem="e86-tx-fm3" secondAttribute="bottom" id="v0q-Jf-YLg"/>
                                             <constraint firstItem="Kxh-Jj-Lja" firstAttribute="centerX" secondItem="qp3-OS-owE" secondAttribute="centerX" constant="-70" id="wlb-Ha-39D"/>
@@ -294,23 +295,40 @@ design and code an iOS 11 app.</string>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcY-mw-bSN">
-                                                <rect key="frame" x="20" y="82" width="304" height="248"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Aab-zz-HNm">
+                                                <rect key="frame" x="0.0" y="82" width="375" height="248"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="304" id="c6S-oS-KMH"/>
-                                                    <constraint firstAttribute="height" constant="248" id="w8q-Eq-BjN"/>
+                                                    <constraint firstAttribute="height" constant="248" id="Wff-6I-6Ww"/>
                                                 </constraints>
-                                            </view>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="awr-be-EHh">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8dJ-rg-E71">
+                                                        <rect key="frame" x="35.666666666666664" y="0.0" width="304" height="248"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="abH-u3-hrD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="248"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="304" height="248"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="EoS-rW-mmT" secondAttribute="trailing" constant="20" id="INc-aA-jf3"/>
                                             <constraint firstItem="EoS-rW-mmT" firstAttribute="top" secondItem="gC8-3e-dU1" secondAttribute="top" constant="50" id="KSg-AD-E0K"/>
-                                            <constraint firstAttribute="bottom" secondItem="QcY-mw-bSN" secondAttribute="bottom" constant="50" id="KdV-Vn-xzl"/>
+                                            <constraint firstItem="Aab-zz-HNm" firstAttribute="leading" secondItem="q3L-kx-Umd" secondAttribute="leading" id="Q2r-t3-Rqs"/>
+                                            <constraint firstItem="q3L-kx-Umd" firstAttribute="bottom" secondItem="Aab-zz-HNm" secondAttribute="bottom" constant="50" id="QJM-k5-idT"/>
                                             <constraint firstAttribute="height" constant="380" id="XM9-ud-s0v"/>
                                             <constraint firstItem="EoS-rW-mmT" firstAttribute="leading" secondItem="q3L-kx-Umd" secondAttribute="leading" constant="20" id="cdR-mz-l6P"/>
-                                            <constraint firstItem="QcY-mw-bSN" firstAttribute="leading" secondItem="q3L-kx-Umd" secondAttribute="leading" constant="20" id="dHP-EQ-LQ8"/>
+                                            <constraint firstItem="q3L-kx-Umd" firstAttribute="trailing" secondItem="Aab-zz-HNm" secondAttribute="trailing" id="vmf-Mu-Txc"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="q3L-kx-Umd"/>
                                     </view>
@@ -345,6 +363,7 @@ design and code an iOS 11 app.</string>
                         <outlet property="bookView" destination="faL-J7-Kme" id="iwY-jg-z1F"/>
                         <outlet property="deviceImageView" destination="9nn-e2-82A" id="zAU-jt-euk"/>
                         <outlet property="heroView" destination="qp3-OS-owE" id="5Qk-kh-cgU"/>
+                        <outlet property="playVisualEffectView" destination="ESm-YF-xcG" id="mVD-ss-DDf"/>
                         <outlet property="playVisualView" destination="ESm-YF-xcG" id="ICU-9y-PMs"/>
                         <outlet property="scrollView" destination="Fai-Nk-Vp0" id="XPh-Nt-Eum"/>
                         <outlet property="titleLabel" destination="Kxh-Jj-Lja" id="VzJ-Bb-9Sj"/>
